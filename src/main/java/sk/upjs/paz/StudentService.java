@@ -1,12 +1,13 @@
 package sk.upjs.paz;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
-public class StudentServise {
+public class StudentService {
     private List<Student> studenti;
-    public StudentServise(List<Student> student) {
-
-        this.studenti = studenti;
+    public StudentService(List<Student> students) {
+        this.studenti = new ArrayList<>(students);
     }
 
     public double podielChlapcov() {
