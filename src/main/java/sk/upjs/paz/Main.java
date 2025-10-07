@@ -1,15 +1,28 @@
 package sk.upjs.paz;
 
-import java.time.LocalDate;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("zzzzzz");
+public class Main extends Application {
+    public static void main(String[] args) throws IOException {
+        launch(args);
+    }
 
-        var student = new Student(1L, "Jan", "Mrkva", Sex.MALE, LocalDate.of(2005, 9, 30));
-
-        student = new Student(student.id(), student.meno(), student.priezvisko(), student.pohlavie(), student.datum());
+    @Override
+    public void start(Stage stage) throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("scene.fxml"));
+        Parent parent = fxmlLoader.load();
+        Scene scene =  new Scene(parent);
+        stage.setScene(scene);
+        stage.setTitle("Java FX");
+        stage.show();
     }
 }
