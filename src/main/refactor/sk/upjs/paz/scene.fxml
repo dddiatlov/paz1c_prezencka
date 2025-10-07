@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.upjs.paz.SceneController">
+   <children>
+      <Button fx:id="button_generate" layoutX="244.0" layoutY="162.0" mnemonicParsing="false" text="Generate number" />
+      <Label fx:id="label_number" layoutX="251.0" layoutY="91.0" text="Number">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Button layoutX="253.0" layoutY="213.0" mnemonicParsing="false" onAction="#loadStudentsClick" text="LoadStudents" />
+      <Button fx:id="button_filename" layoutX="189.0" layoutY="326.0" mnemonicParsing="false" text="Set file" />
+      <TextField fx:id="input_filename" layoutX="276.0" layoutY="326.0" text="students.csv" />
+   </children>
+</AnchorPane>
